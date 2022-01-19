@@ -1,0 +1,23 @@
+ALGORITHM sumOverlapping
+VAR
+    TAB1 : ARRAY_OF INTEGER[length];
+    TAB2 : ARRAY_OF INTEGER[length];
+    sum1, sum2, totSum, i, j : INTEGER
+
+BEGIN
+ sum1, sum2, totSum = 0
+    
+    FOR i FROM 0 TO TAB1.length STEP 1  DO
+        IF (TAB1[i]=TAB2[j]) THEN
+            sum1 = sum + TAB1[i]
+        ELSE
+    FOR i FROM 0 TO TAB2.length STEP 1  DO
+        IF (TAB2[j]=TAB1[i]) THEN
+            sum2 = sum2 + TAB2[j]
+
+        totSum = sum1 + sum2   
+        END_IF
+    
+    END_FOR
+    write (totSum)
+END
